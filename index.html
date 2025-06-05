@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Creado por Kevin Quesada :) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo Social</title>
+
+  <!-- Fuentes y estilos -->
+  <link rel="stylesheet" href="CSS/stil.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- BOTÓN PARA CAMBIAR TEMA -->
+  <div class="switch-tema">
+    <label>
+      <input type="checkbox" id="toggle-tema">
+      🌙 Modo Oscuro
+    </label>
+  </div>
+
+  <!-- ENCABEZADO CON IMAGEN Y TEXTO -->
+  <header class="encabezado-dual">
+    <img src="imagenes/crisis.jpeg" alt="Salud Mental" class="img-encabezado" />
+    <div class="texto-encabezado">
+      <h1>CRISIS HUMANITARIA</h1>
+      <p>La importancia de la salud mental en crisis humanitarias</p>
+    </div>
+  </header>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navegacion">
+    <ul>
+      <li><a href="pages/mapa_mental.html">Mapa Mental</a></li>
+      <li><a href="pages/infografia.html">Infografía</a></li>
+      <li><a href="pages/linea_t.html">Línea de Tiempo</a></li>
+      <li><a href="pages/cuadro_comparativo.html">Cuadro Comparativo</a></li>
+      <li><a href="pages/mapa.html">Mapa Conceptual</a></li>
+      <li><a href="pages/nube_palabras.html">Nube de Palabras</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECCIÓN DE INTEGRANTES -->
+  <section id="anexos">
+    <h2>INTEGRANTES</h2>
+    <div class="integrantes">
+      <div class="integrante">
+        <img src="imagenes/img.jpg" alt="SHARIT FERNANDA ROJAS PÉREZ">
+        <p>SHARIT FERNANDA ROJAS PÉREZ</p>
+      </div>
+      <div class="integrante">
+        <img src="imagenes/integrante2.jpg" alt="JOHAN MAURICIO GAMBOA BOLAÑOS">
+        <p>JOHAN MAURICIO GAMBOA BOLAÑOS</p>
+      </div>
+      <div class="integrante">
+        <img src="imagenes/img.jpg" alt="LAURA DANIELA MUÑOZ">
+        <p>LAURA DANIELA MUÑOZ</p>
+      </div>
+      <div class="integrante">
+        <img src="imagenes/img.jpg" alt="MARÍA FERNANDA VARGAS">
+        <p>MARÍA FERNANDA VARGAS</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenido">
+    <section>
+      <h2>¿QUÉ ES UNA CRISIS HUMANITARIA?</h2>
+      <p>Una <strong>crisis humanitaria</strong> es una situación de emergencia grave...</p>
+      <ul class="lista-crisis">
+        <li><strong>Altos niveles de mortalidad</strong> debido a causas directas o indirectas de la emergencia.</li>
+        <li><strong>Escasez de alimentos y malnutrición</strong>, que afecta especialmente a niños y personas vulnerables.</li>
+        <li><strong>Brotes de enfermedades y epidemias</strong> causados por condiciones insalubres...</li>
+        <li><strong>Desplazamientos masivos</strong> de personas que huyen de la violencia...</li>
+        <li><strong>Colapso de servicios básicos</strong>, como salud, agua, saneamiento y refugio.</li>
+      </ul>
+      <p>Las crisis humanitarias pueden originarse por desastres naturales...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Trabajo Social - Crisis Humanitaria</p>
+  </footer>
+
+  <!-- SCRIPT PARA CAMBIAR EL MODO -->
+  <script>
+    const toggle = document.getElementById('toggle-tema');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('modo-oscuro');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === FUENTE GENERAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eef5f9;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* === TARJETAS EN MODO OSCURO === */
+body.modo-oscuro {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.modo-oscuro .tarjeta {
+  background-color: #1e1e1e;
+  border-left-color: #4da3cc;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.modo-oscuro .tarjeta h2 {
+  color: #4da3cc;
+}
+
+body.modo-oscuro .tarjeta p {
+  color: #e0e0e0;
+}
+
+body.modo-oscuro header,
+body.modo-oscuro nav,
+body.modo-oscuro footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.modo-oscuro nav ul li a {
+  color: #ffffff;
+}
+
+body.modo-oscuro .contenido,
+body.modo-oscuro .integrantes,
+body.modo-oscuro .contenido section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.modo-oscuro .contenido p:first-of-type {
+  background-color: #2a2a2a;
+  border-left: 5px solid #1e90ff;
+}
+
+body.modo-oscuro .lista-crisis {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+body.modo-oscuro .lista-crisis li {
+  color: #f0f0f0;
+}
+
+body.modo-oscuro .contenido strong {
+  color: #ffffff;
+}
+
+/* === BOTÓN DE CAMBIO DE TEMA === */
+.switch-tema {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #eee;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+body.modo-oscuro .switch-tema {
+  background-color: #333;
+  color: #fff;
+}
+
+/* === ENCABEZADO === */
+.encabezado-dual {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.encabezado-dual::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(270deg, #235067, #326b85, #4da3cc);
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.img-encabezado {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.texto-encabezado {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.7),
+    0 0 10px rgba(255,255,255,0.5),
+    0 0 20px rgba(255,255,255,0.3);
+  animation: fadeInGlow 3s ease forwards;
+}
+
+.texto-encabezado h1 {
+  font-size: 3rem;
+  padding: 10px 25px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInGlow {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    text-shadow: none;
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(2px);
+    text-shadow:
+      0 0 10px rgba(255,255,255,0.9),
+      0 0 20px rgba(255,255,255,0.7);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    text-shadow:
+      0 0 5px rgba(255,255,255,1),
+      0 0 15px rgba(255,255,255,0.8);
+  }
+}
+
+/* === CONTENIDO GENERAL === */
+.contenido {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  flex-grow: 1;
+}
+
+.contenido h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contenido p {
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+/* === INFOGRAFÍA VISUAL === */
+.infografia-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.infografia-container img {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #ddd;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.infografia-container img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+.infografia-container a {
+  display: inline-block;
+  background-color: #235067;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 10px #235067,
+    0 0 20px #235067,
+    0 0 40px #1c3d58;
+}
+
+.infografia-container a:hover {
+  background-color: #326b85;
+  box-shadow:
+    0 0 20px #326b85,
+    0 0 40px #326b85,
+    0 0 60px #2c5a75;
+  transform: scale(1.1);
+  animation: pulseNeon 1.5s infinite;
+}
+
+@keyframes pulseNeon {
+  0%, 100% {
+    box-shadow:
+      0 0 20px #326b85,
+      0 0 40px #326b85,
+      0 0 60px #2c5a75;
+  }
+  50% {
+    box-shadow:
+      0 0 30px #4da3cc,
+      0 0 50px #4da3cc,
+      0 0 70px #4da3cc;
+  }
+}
+
+/* === BOTÓN SUPERIOR === */
+.boton-superior {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.btn-regresar {
+  background-color: #235067;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 8px #235067,
+    0 0 15px #235067;
+}
+
+.btn-regresar:hover {
+  background-color: #326b85;
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px #326b85,
+    0 0 30px #326b85;
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+  width: 100%;
+  background-color: #1f2b37;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* === TARJETAS DE CAMBIO CLIMÁTICO === */
+.tema-clima {
+  display: grid;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border-left: 6px solid #235067;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta h2 {
+  color: #235067;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.tarjeta p {
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #333;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .texto-encabezado h1 {
+    font-size: 2.2rem;
+  }
+
+  .encabezado-dual {
+    height: 60vh;
+  }
+
+  .btn-regresar {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .infografia-container img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta {
+    padding: 20px;
+  }
+
+  .tarjeta h2 {
+    font-size: 1.5rem;
+  }
+
+  .tarjeta p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-encabezado h1 {
+    font-size: 1.5rem;
+  }
+
+  .contenido h2 {
+    font-size: 1.5rem;
+  }
+
+  .contenido p {
+    font-size: 1rem;
+  }
+
+  .infografia-container a {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
