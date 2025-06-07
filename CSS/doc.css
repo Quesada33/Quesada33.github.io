@@ -5,19 +5,39 @@
   box-sizing: border-box;
 }
 
-/* === CUERPO GENERAL === */
+/* === FUENTE GENERAL === */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #eef5f9;
+  background-color: #f4f6fa;
   color: #222;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* === BOTÓN MODO OSCURO === */
+/* === ENLACES === */
+a.enlace-externo,
+a.enlace-pdf {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1e2a38;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+a.enlace-externo:hover,
+a.enlace-pdf:hover {
+  background-color: #32445a;
+  transform: translateY(-2px);
+}
+
+/* === BOTÓN MODO OSCURO (ESTILO FINAL) === */
 .switch-tema {
   position: fixed;
   bottom: 20px;
@@ -29,7 +49,7 @@ body {
   border-radius: 30px;
   font-weight: 600;
   font-size: 0.95rem;
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   user-select: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -64,20 +84,15 @@ body.modo-oscuro .switch-tema:hover {
   background-color: #666;
 }
 
-/* TEXTO BLANCO en modo oscuro */
-body.modo-oscuro h1,
-body.modo-oscuro h2,
-body.modo-oscuro h3,
-body.modo-oscuro h4,
-body.modo-oscuro h5,
-body.modo-oscuro h6,
-body.modo-oscuro p,
-body.modo-oscuro span,
-body.modo-oscuro li,
-body.modo-oscuro a,
-body.modo-oscuro .contenido p,
-body.modo-oscuro .texto-encabezado {
-  color: #ffffff;
+body.modo-oscuro a.enlace-externo,
+body.modo-oscuro a.enlace-pdf {
+  background-color: #555;
+  color: #fff;
+}
+
+body.modo-oscuro a.enlace-externo:hover,
+body.modo-oscuro a.enlace-pdf:hover {
+  background-color: #777;
 }
 
 /* === ENCABEZADO CON IMAGEN DE FONDO === */
@@ -86,7 +101,7 @@ body.modo-oscuro .texto-encabezado {
   width: 100%;
   height: 70vh;
   overflow: hidden;
-  perspective: 800px;
+  perspective: 1000px;
 }
 
 .img-encabezado {
@@ -107,24 +122,27 @@ body.modo-oscuro .texto-encabezado {
 
 .texto-encabezado {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   z-index: 2;
   padding: 20px;
-  animation: fadeInDown 1s ease forwards;
+  animation: fadeInDown 1.2s ease forwards;
   opacity: 0;
 }
 
 .texto-encabezado h1 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
   transition: background-color 0.4s ease;
+  cursor: default;
 }
 
 .texto-encabezado h1:hover {
@@ -136,7 +154,6 @@ body.modo-oscuro .texto-encabezado {
   max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
-  flex-grow: 1;
   animation: fadeInUp 1.2s ease forwards;
   opacity: 0;
 }
@@ -146,8 +163,8 @@ body.modo-oscuro .texto-encabezado {
   font-weight: 600;
   margin-bottom: 20px;
   text-align: center;
-  color: #1f2b37;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #1e2a38;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .contenido p {
@@ -161,28 +178,27 @@ body.modo-oscuro .texto-encabezado {
 }
 
 .contenido p:hover {
-  color: #1f2b37;
+  color: #1e2a38;
 }
 
-/* Imagen dentro del contenido */
-.imagen-principal {
+/* === IMÁGENES DENTRO DE CONTENIDO (si aplica) === */
+.contenido img {
   display: block;
-  width: 90%;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: 0 auto 40px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   border: 3px solid #ccc;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
 }
 
-.imagen-principal:hover {
+.contenido img:hover {
   transform: scale(1.03);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* === BOTÓN REGRESAR === */
+/* === BOTÓN SUPERIOR FIJO === */
 .boton-superior {
   position: fixed;
   top: 20px;
@@ -192,33 +208,37 @@ body.modo-oscuro .texto-encabezado {
   opacity: 0;
 }
 
-.btn-regresar {
-  background-color: #235067;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
+.boton-superior .btn-regresar {
+  background-color: #1e2a38;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  user-select: none;
+  display: inline-block;
 }
 
-.btn-regresar:hover {
-  background-color: #326b85;
-  transform: scale(1.05) rotate(-2deg);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+.boton-superior .btn-regresar:hover {
+  background-color: #32445a;
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 10px 25px rgba(50, 68, 90, 0.6);
 }
 
 /* === PIE DE PÁGINA === */
 footer {
-  width: 100%;
-  background-color: #1f2b37;
-  color: white;
+  background-color: #1e2a38;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  margin-top: auto;
+  padding: 25px 20px;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  letter-spacing: 0.05em;
   box-shadow: inset 0 8px 10px -8px rgba(255, 255, 255, 0.2);
+  user-select: none;
 }
 
 /* === ANIMACIONES === */
@@ -255,42 +275,49 @@ footer {
   }
 }
 
-/* === RESPONSIVE DESIGN === */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .texto-encabezado h1 {
-    font-size: 2.2rem;
+    font-size: clamp(1.3rem, 6vw, 2.2rem);
   }
 
   .encabezado-dual {
     height: 60vh;
   }
 
-  .btn-regresar {
+  .boton-superior .btn-regresar {
     font-size: 0.85rem;
     padding: 8px 14px;
   }
 
-  .contenido img,
-  .imagen-principal {
-    width: 100%;
+  .contenido {
+    padding: 0 10px;
+  }
+
+  .switch-tema {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  a.enlace-externo,
+  a.enlace-pdf {
+    font-size: 0.95rem;
+    padding: 8px 14px;
   }
 }
 
-@media (max-width: 480px) {
-  .texto-encabezado h1 {
-    font-size: 1.5rem;
-  }
-
-  .contenido h2 {
-    font-size: 1.5rem;
-  }
-
-  .contenido p {
-    font-size: 1rem;
-  }
-}
-
-/* === SCROLL SUAVE === */
+/* === SCROLL SMOOTH para mejor UX === */
 html {
   scroll-behavior: smooth;
+}
+
+/* === MODO OSCURO - TEXTOS BLANCOS === */
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro p,
+body.modo-oscuro a,
+body.modo-oscuro .contenido h2,
+body.modo-oscuro .contenido p,
+body.modo-oscuro footer {
+  color: #ffffff !important;
 }

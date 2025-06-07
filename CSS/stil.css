@@ -355,6 +355,8 @@ footer {
 }
 
 /* === RESPONSIVE DESIGN === */
+
+/* Tablets (≤768px) */
 @media (max-width: 768px) {
   .texto-encabezado h1 {
     font-size: 2.2rem;
@@ -389,6 +391,7 @@ footer {
   }
 }
 
+/* Teléfonos (≤480px) */
 @media (max-width: 480px) {
   .texto-encabezado h1 {
     font-size: 1.6rem;
@@ -405,5 +408,34 @@ footer {
 
   .contenido {
     padding: 0 15px;
+  }
+
+  .btn-regresar {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .switch-tema {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Pantallas grandes (≥1200px) */
+@media (min-width: 1200px) {
+  .contenido {
+    padding: 0 40px;
+  }
+
+  .texto-encabezado h1 {
+    font-size: 3.5rem;
+  }
+
+  .texto-encabezado p {
+    font-size: 1.5rem;
+  }
+
+  .integrante {
+    width: 220px;
   }
 }
