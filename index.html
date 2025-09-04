@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <link rel="stylesheet" href="CSS/estilos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col items-center mb-16">
+            <div class="profile-pic w-40 h-40 rounded-full overflow-hidden mb-6 bg-white shadow-xl">
+                <img src="img/Kev.jpg">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 text-center bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">KEVIN ALEXIS QUESADA RUIZ</h1>
+            <p class="text-xl text-gray-600 mb-6 text-center">TECNICO PROFESIONAL EN PROGRAMACIÓN WEB</p>
+            
+                <!-- Navigation -->
+            <div class="flex space-x-6 mb-12">
+                <button class="nav-btn active px-4 py-2 rounded-lg transition-all" data-tab="about">Sobre mí</button>
+                <button class="nav-btn px-4 py-2 rounded-lg transition-all" data-tab="projects">Proyectos</button>
+            </div>
+        </header>
+        
+        <!-- About Me Content -->
+        <div id="about" class="tab-content active">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Hola, soy Kevin Alexis Quesada Ruiz</h2>
+                    <p>Soy <strong>Kevin Alexis Quesada Ruiz</strong> y este portafolio es un espacio donde iré compartiendo mis actividades, análisis y reflexiones sobre los diferentes temas trabajados en clase.  Mi objetivo es que este sitio sea una herramienta de organización y aprendizaje, que refleje mi progreso en la materia.</p><br>
+                    <div class="flex space-x-4">
+                        <a href="doc/CV.pdf" download="Mi_CV.pdf"  class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all"> Descargar CV </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6">Mis Habilidades</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Diseño UX/UI</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Desarrollo Frontend</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Comunicación</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projects Content -->
+        <div id="projects" class="tab-content">
+            <h2 class="text-3xl font-bold mb-12 text-center">ACTIVIDADES</h2>
+
+
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/taller2.jpg" alt="Captura de pantalla del proyecto E-commerce Platform mostrando interfaz moderna con productos y carrito de compras" class="w-full h-full object-cover" />
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">El Hambre</h3>
+                        <p class="text-gray-600 mb-4">Plataforma de comercio electrónico con carrito de compras y pasarela de pago.</p>
+                        <div class="flex space-x-4">
+                        <!-- Botón para descargar -->
+                        <a href="doc/Hambre.docx" download="Hambre.docx"
+                        class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+                        📥 Descargar
+                        </a>
+
+                        <!-- Botón para ver directamente -->
+                        <a href="https://docs.google.com/document/d/1FRoUtjd6DoHfD1dTso_wG-kPi_FNn6UU/edit?rtpof=true" 
+                        target="_blank"
+                        class="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all">
+                        👁️ Ver Online
+                        </a>
+                         </div>
+                  </div>
+               </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/taller1.jpg" alt="Interfaz de aplicación móvil de salud mostrando seguimiento de actividad física y gráficos de progreso" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">EL AMOR EN LOS TIEMPOS DE LA TECNOLOGÍA</h3>
+                        <p class="text-gray-600 mb-4">El amor digital debe sumar, no reemplazar, el contacto humano real.</p>
+                        
+                        <div class="flex space-x-4">
+                        <!-- Botón para descargar -->
+                        <a href="doc/Taller_Amor en la tecnologia.docx" download="Taller_Amor en la tecnologia.docx"
+                        class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+                        📥 Descargar
+                        </a>
+
+                        <!-- Botón para ver directamente -->
+                        <a href="https://docs.google.com/document/d/1BYCJdzGkYb0Fd60asHaKZixJFEvIpBuK/edit" 
+                        target="_blank"
+                        class="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all">
+                        👁️ Ver Online
+                        </a>
+                         </div>
+                    </div>
+                </div>      
+                
+                <!-- Proyecto 3 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/taller3.jpg" alt="Dashboard analítico con visualizaciones de datos y métricas clave en paneles interactivos" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Historia Ordinaria</h3>
+                        <p class="text-gray-600 mb-4">Un reflejo de las luchas y deudas que enfrenta el colombiano común en su búsqueda de un futuro mejor.</p>
+                        
+                        <div class="flex space-x-4">
+                        <!-- Botón para descargar -->
+                        <a href="doc/Historia_Ordinaria.docx" download="Historia Ordinaria.docx"
+                        class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+                        📥 Descargar
+                        </a>
+
+                        <!-- Botón para ver directamente -->
+                        <a href="https://docs.google.com/document/d/1KyYL_5GOPRaLrOKJNjyQ3gU8U9NB5FG0/edit" 
+                        target="_blank"
+                        class="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all">
+                        👁️ Ver Online
+                        </a>
+                         </div>
+
+                    </div>
+                </div>
+
+
+                
+                 <!-- Proyecto 4 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/taller4.jpg" alt="Dashboard analítico con visualizaciones de datos y métricas clave en paneles interactivos" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Los Nadies</h3>
+                        <p class="text-gray-600 mb-4">Un retrato de los invisibles, aquellos que viven, sueñan y mueren sin ser reconocidos."</p>
+                        
+                        <div class="flex space-x-4">
+                        <!-- Botón para descargar -->
+                        <a href="doc/Los_Nadies.docx" download="Los Nadies.docx"
+                        class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+                        📥 Descargar
+                        </a>
+
+                        <!-- Botón para ver directamente -->
+                        <a href="https://docs.google.com/document/d/19zOPEqtFi-T4rJOk4dcItUpcBSleHFmW/edit?usp=sharing&ouid=110788034402863848593&rtpof=true&sd=true" 
+                        target="_blank"
+                        class="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all">
+                        👁️ Ver Online
+                        </a>
+                         </div>
+                    </div>
+                </div>
+
+                
+                <!-- Proyecto 5 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/taller5.jpg" alt="Dashboard analítico con visualizaciones de datos y métricas clave en paneles interactivos" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">La Lectura como Proceso de Interpretación y Desciframiento</h3>
+                        <p class="text-gray-600 mb-4">Leer no es repetir signos, es descubrir sentidos ocultos y construir significados propio"</p>
+                        
+                        <div class="flex space-x-4">
+                        <!-- Botón para descargar -->
+                        <a href="doc/LECTURA.docx" download="La lectura como proceso de interpretación y desciframiento.docx"
+                        class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+                        📥 Descargar
+                        </a>
+
+                        <!-- Botón para ver directamente -->
+                        <a href="https://docs.google.com/document/d/1iKrJFVbjgXqZK9VtAxeKgJBHlYXSZe6w/edit" 
+                        target="_blank"
+                        class="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all">
+                        👁️ Ver Online
+                        </a>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/taller6.jpg" alt="Dashboard analítico con visualizaciones de datos y métricas clave en paneles interactivos" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tipos de conciencia</h3>
+                        <p class="text-gray-600 mb-4">Paulo Freire propone tres conciencias: mágica, ingenua y crítica; la educación impulsa el paso hacia una conciencia crítica y transformadora.</p>
+                        
+                        <div class="flex space-x-4">
+                        <!-- Botón para descargar -->
+                        <a href="doc/Tipos_de_conciencia.docx" download="Tipos de conciencia.docx"
+                        class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+                        📥 Descargar
+                        </a>
+
+                        <!-- Botón para ver directamente -->
+                        <a href="https://docs.google.com/document/d/1_R-omvJtbdtJaBHaDT5NMwjKvLhCPFAq/edit?usp=sharing&ouid=110788034402863848593&rtpof=true&sd=true" 
+                        target="_blank"
+                        class="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all">
+                        👁️ Ver Online
+                        </a>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- Proyecto 7 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/taller7.jpg" alt="Dashboard analítico con visualizaciones de datos y métricas clave en paneles interactivos" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Lo Instituido</h3>
+                        <p class="text-gray-600 mb-4">La sociedad necesita tanto lo instituido como lo instituyente para crecer y transformarse.</p>
+                        
+                        <div class="flex space-x-4">
+                        <!-- Botón para descargar -->
+                        <a href="doc/Lo_Instituido.docx" download="Lo Instituido.docx"
+                        class="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
+                        📥 Descargar
+                        </a>
+
+                        <!-- Botón para ver directamente -->
+                        <a href="https://docs.google.com/document/d/1CWt9FverqrVo0lLZ8fDWJ7UgXQBDCypi/edit?usp=sharing&ouid=110788034402863848593&rtpof=true&sd=true" 
+                        target="_blank"
+                        class="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all">
+                        👁️ Ver Online
+                        </a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-100 py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.facebook.com/share/1AnXnrVcY1/" class="text-gray-600 hover:text-purple-600 transition-colors">Facebook</a>
+                <a href="https://github.com/login" class="text-gray-600 hover:text-purple-600 transition-colors">GitHub</a>
+                <a href="#" class="text-gray-600 hover:text-purple-600 transition-colors">Twitter</a>
+            </div>
+            <p class="text-gray-500">© <span id="year"></span> Kevin Quesada. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="SCRIPTS/js.js"></script>
+</body>
+</html>
+
